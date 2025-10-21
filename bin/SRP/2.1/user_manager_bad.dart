@@ -12,12 +12,10 @@ class UserManager {
 
   void saveToDatabase() {
     print('Saving user $name to database...');
-    // Database code here
   }
 
   void sendWelcomeEmail() {
     print('Sending welcome email to $email...');
-    // Email sending code here
   }
 
   void logUserCreation() {
@@ -28,12 +26,9 @@ class UserManager {
     this.name = name;
     this.email = email;
 
-    if (!isValidEmail(email)) {
-      print('Invalid email');
-      return;
-    }
+    if (!isValidEmail(email)) return;
 
-    hashPassword(password);
+    final hashed = hashPassword(password);
     saveToDatabase();
     sendWelcomeEmail();
     logUserCreation();
