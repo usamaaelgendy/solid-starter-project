@@ -28,7 +28,7 @@ class UserManager {
 
     if (!isValidEmail(email)) return;
 
-    final hashed = hashPassword(password);
+    hashPassword(password);
     saveToDatabase();
     sendWelcomeEmail();
     logUserCreation();
