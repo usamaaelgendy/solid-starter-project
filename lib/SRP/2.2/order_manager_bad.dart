@@ -6,7 +6,6 @@ class Order {
   Order({required this.id, required this.total, required this.items});
 }
 
-// ❌ This class is doing WAY too many jobs!
 class OrderManager {
   // Job 1: Validation
   bool isValidOrder(Order order) {
