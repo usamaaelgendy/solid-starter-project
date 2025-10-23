@@ -20,6 +20,8 @@ class ReportGenerator {
       return _generateCSV(data);
     } else if (type == 'EXCEL') {
       return _generateExcel(data);
+    } else if (type == 'JSON') {
+      return _generateJson(data);
     }
 
     return 'Unsupported format';
@@ -39,6 +41,10 @@ class ReportGenerator {
 
   String _generateExcel(ReportData data) {
     return 'EXCEL:${data.title}|${data.items.join('|')}';
+  }
+
+  String _generateJson(ReportData data) {
+    return '{"title":"${data.title}", "items":"${data.items}"}';
   }
 }
 
