@@ -10,7 +10,7 @@ class ReportData {
   });
 }
 
-class ReportGenerator {
+class ReportGeneratorBad {
   String generate(ReportData data, String type) {
     if (type == 'PDF') {
       return _generatePDF(data);
@@ -55,7 +55,7 @@ void main() {
     generatedAt: DateTime.now(),
   );
 
-  final generator = ReportGenerator();
+  final generator = ReportGeneratorBad();
 
   print(generator.generate(data, 'PDF'));
   print(generator.generate(data, 'HTML'));
