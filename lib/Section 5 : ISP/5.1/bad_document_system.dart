@@ -1,3 +1,7 @@
+//  What is ISP? (Simple Definition)
+//  - "Clients shouldn't be forced to depend on interfaces they don't use."
+//  - "No client should be forced to implement methods it doesn't need."
+
 abstract class Document {
   void printDocument();
 
